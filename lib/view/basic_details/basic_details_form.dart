@@ -7,8 +7,10 @@ import 'package:screl/core/constants/text_strings.dart';
 import 'package:screl/core/common/j_gap.dart';
 import 'package:screl/core/common/switch_input.dart';
 import 'package:screl/core/common/text_input.dart';
+import 'package:screl/core/utils/devices/screen_size.dart';
 import 'package:screl/core/utils/validators/validation.dart';
 import 'package:screl/data/campaign_form_data.dart';
+import 'package:screl/view/widgets/mobile_progress_bar.dart';
 import 'package:screl/view/widgets/processing_buttons.dart';
 import 'package:screl/view_model/campaign_form_notifier.dart';
 import 'package:screl/view_model/sidebar_view_model.dart';
@@ -24,6 +26,7 @@ class CampaignForm extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final isMobile = ScreenSize.isMobile(context);
     final currentStep = ref.watch(campaignProvider
         .select((state) => state.indexWhere((step) => step.isActive) + 1));
     final formsData = ref.watch(campaignFormsProvider);
@@ -44,7 +47,9 @@ class CampaignForm extends ConsumerWidget {
         key: formKey,
         child: Column(
           children: [
-            const Spacer(flex: 2),
+             Spacer(flex:isMobile ?1: 2),
+            isMobile ? const MobileProgressbar() : const SizedBox(),
+             Spacer(flex:  isMobile ?1: 1),
             //--- HEADING ---
             Text(JTexts.formTitle,
                 style: Theme.of(context).textTheme.headlineLarge),

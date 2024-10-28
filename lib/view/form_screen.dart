@@ -17,7 +17,7 @@ class ScnHome extends StatelessWidget {
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           final isDesktop = ScreenSize.isDesktop(context);
-          // final isTablet = ScreenSize.isTablet(context);
+       
 
           if (isDesktop) {
             return Container(
@@ -33,13 +33,11 @@ class ScnHome extends StatelessWidget {
                 ],
               ),
             );
-          } else {
-            return SingleChildScrollView(
-              padding: const EdgeInsets.all(JSize.defaultPaddingValue),
-              child: CampaignForm(),
-            );
-          }
+          } 
+          return 
+          Flexible(child: CampaignForm());
         },
+        
       ),
     );
   }
