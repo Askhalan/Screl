@@ -1,4 +1,4 @@
-// campaign_form.dart
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:screl/core/constants/colors.dart';
@@ -32,7 +32,7 @@ class CampaignForm extends ConsumerWidget {
     final formsData = ref.watch(campaignFormsProvider);
     final currentFormData = formsData[currentStep] ?? CampaignFormData();
 
-    // Update controllers with current step data
+    // Updating controllers with current step data
     prevTextController.text = currentFormData.previewText ?? '';
     subjectController.text = currentFormData.subject ?? '';
     nameController.text = currentFormData.name ?? '';

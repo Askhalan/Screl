@@ -12,10 +12,10 @@ final campaignFormsProvider =
 
 class CampaignFormsNotifier extends StateNotifier<Map<int, CampaignFormData>> {
   CampaignFormsNotifier() : super({}) {
-    _loadFromCache();
+    loadFromCache();
   }
 
-  Future<void> _loadFromCache() async {
+  Future<void> loadFromCache() async {
     final box = await Hive.openBox<Map<dynamic, dynamic>>('campaign_forms');
     final cachedData = box.get('all_forms');
     if (cachedData != null) {
@@ -32,7 +32,7 @@ class CampaignFormsNotifier extends StateNotifier<Map<int, CampaignFormData>> {
     }
   }
 
-  Future<void> _saveToCache() async {
+  Future<void> saveToCache() async {
     final box = await Hive.openBox<Map<dynamic, dynamic>>('campaign_forms');
     final dataToSave = state.map((key, value) => MapEntry(key.toString(), value.toJson()));
     await box.put('all_forms', dataToSave);
@@ -60,11 +60,11 @@ class CampaignFormsNotifier extends StateNotifier<Map<int, CampaignFormData>> {
         currentStep: step,
       ),
     };
-    _saveToCache();
+    saveToCache();
   }
 
   void saveDraft(int step) {
-    _saveToCache();
+    saveToCache();
   }
 
   void completeCampaign() {

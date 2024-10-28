@@ -28,9 +28,7 @@ class Sidebar extends ConsumerWidget {
             itemBuilder: (BuildContext context, int index) {
               final step = campaignSteps[index];
               return ListTile(
-                onTap: () {
-                  // ref.read(campaignProvider.notifier).goToStep(step.stepNumber);
-                },
+               
                 leading: Container(
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
@@ -66,7 +64,7 @@ class Sidebar extends ConsumerWidget {
               );
             },
           ),
-          // Rest of your help section remains the same
+        
         ],
       ),
     );

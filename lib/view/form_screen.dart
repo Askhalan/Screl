@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:screl/core/common/j_gap.dart';
 import 'package:screl/core/constants/sizes.dart';
-import 'package:screl/core/utils/devices/device_utility.dart';
 import 'package:screl/core/utils/devices/screen_size.dart';
 import 'package:screl/view/basic_details/basic_details_form.dart';
 import 'package:screl/view/widgets/sidebar.dart';
@@ -17,11 +16,10 @@ class ScnHome extends StatelessWidget {
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           final isDesktop = ScreenSize.isDesktop(context);
-       
 
           if (isDesktop) {
             return Container(
-              height: JDeviceUtil.getScreenHeight(context) * 0.92,
+              height: ScreenSize.getScreenHeight(context) * 0.92,
               padding: const EdgeInsets.symmetric(
                   vertical: JSize.defaultPaddingValue * 2,
                   horizontal: JSize.defaultPaddingValue * 15),
@@ -33,11 +31,9 @@ class ScnHome extends StatelessWidget {
                 ],
               ),
             );
-          } 
-          return 
-          Flexible(child: CampaignForm());
+          }
+          return Flexible(child: CampaignForm());
         },
-        
       ),
     );
   }
