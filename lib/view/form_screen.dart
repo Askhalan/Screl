@@ -5,11 +5,11 @@ import 'package:screl/core/common/j_gap.dart';
 import 'package:screl/core/constants/sizes.dart';
 import 'package:screl/core/utils/devices/device_utility.dart';
 import 'package:screl/core/utils/devices/screen_size.dart';
-import 'package:screl/view/widgets/campaign_form.dart';
+import 'package:screl/view/basic_details/basic_details_form.dart';
 import 'package:screl/view/widgets/sidebar.dart';
 
-class ScnForm extends StatelessWidget {
-  const ScnForm({super.key});
+class ScnHome extends StatelessWidget {
+  const ScnHome({super.key});
 
   @override
   Widget build(BuildContext context) {

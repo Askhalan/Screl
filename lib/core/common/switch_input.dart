@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:screl/core/constants/colors.dart';
 
@@ -7,9 +5,14 @@ class SwitchInput extends StatelessWidget {
   const SwitchInput({
     super.key,
     required this.label,
+    required this.value,
+    required this.onChanged,
   });
 
   final String label;
+  final bool value;
+  final ValueChanged<bool> onChanged;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -26,8 +29,8 @@ class SwitchInput extends StatelessWidget {
             alignment: Alignment.centerRight,
             child: Switch(
               inactiveTrackColor: JColor.secondary,
-              value: true,
-              onChanged: (bool value) {},
+              value: value,
+              onChanged: onChanged,
             ),
           ),
         ),

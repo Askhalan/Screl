@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: JAppTheme.lightTheme,
       // darkTheme: JAppTheme.darkTheme,
-      home: ScnForm(),
+      home: ScnHome(),
     );
   }
 }
