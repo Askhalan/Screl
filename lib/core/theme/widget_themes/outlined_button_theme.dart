@@ -16,14 +16,12 @@ class JOutlinedButtonTheme {
       side: const BorderSide(color: JColor.primary),
       padding: const EdgeInsets.symmetric(vertical: JSize.buttonHeight),
       textStyle: const TextStyle(
-          fontSize: 16, color: JColor.primary, fontWeight: FontWeight.w600),
+          fontSize: JSize.fontSm, color: JColor.primary,),
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(JSize.buttonRadius)),
       minimumSize: const Size.fromHeight(50),
       maximumSize: const Size(double.infinity, 50),
-    ).copyWith(
-      fixedSize: WidgetStateProperty.all<Size>(const Size(double.infinity, 50)),
-    ),
+    )
   );
 
   /* -- Dark Theme -- */
@@ -38,8 +36,6 @@ class JOutlinedButtonTheme {
           borderRadius: BorderRadius.circular(JSize.buttonRadius)),
       minimumSize: const Size.fromHeight(50),
       maximumSize: const Size(double.infinity, 50),
-    ).copyWith(
-      fixedSize: WidgetStateProperty.all<Size>(const Size(double.infinity, 50)),
-    ),
+    )
   );
 }

@@ -19,12 +19,12 @@ static final lightElevatedButtonTheme = ElevatedButtonThemeData(
     disabledBackgroundColor: JColor.buttonDisabled,
     side: const BorderSide(color: JColor.primary),
     padding: const EdgeInsets.symmetric(vertical: JSize.buttonHeight),
-    textStyle: const TextStyle(fontSize: 16, color:  JColor.white, fontWeight: FontWeight.w600),
+    textStyle: const TextStyle(fontSize: JSize.fontSm, color:  JColor.white, fontWeight: FontWeight.w500),
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(JSize.buttonRadius)),
     minimumSize: const Size.fromHeight(50), 
     maximumSize: const Size(double.infinity, 50), 
   ).copyWith(
-    fixedSize: WidgetStateProperty.all<Size>(const Size(double.infinity, 50)),
+    // fixedSize: WidgetStateProperty.all<Size>(const Size(double.infinity, 50)),
   ),
 );
 
@@ -43,7 +43,7 @@ static final lightElevatedButtonTheme = ElevatedButtonThemeData(
       minimumSize: const Size.fromHeight(50), 
     maximumSize: const Size(double.infinity, 50),
   ).copyWith(
-    fixedSize: WidgetStateProperty.all<Size>(const Size(double.infinity, 50)),
+    // fixedSize: WidgetStateProperty.all<Size>(const Size(double.infinity, 50)),
   ),
   );
 }

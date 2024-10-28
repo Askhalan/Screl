@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screl/core/theme/widget_themes/switch_theme.dart';
 import '../constants/colors.dart';
 import 'widget_themes/elevated_button_theme.dart';
 import 'widget_themes/outlined_button_theme.dart';
@@ -17,7 +18,8 @@ class JAppTheme {
     brightness: Brightness.light,
     primaryColor: JColor.primary,
     textTheme: JTextTheme.lightTextTheme,
-    scaffoldBackgroundColor: JColor.white,
+    switchTheme: JSwitchTheme.lightSwitchTheme,
+    scaffoldBackgroundColor: JColor.secondary,
     elevatedButtonTheme: JElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: JOutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: JTextFormFieldTheme.lightInputDecorationTheme,
@@ -33,6 +35,7 @@ class JAppTheme {
     primaryColor: JColor.primary,
     textTheme: JTextTheme.darkTextTheme,
     scaffoldBackgroundColor: JColor.secondary,
+    switchTheme: JSwitchTheme.darkSwitchTheme,
     elevatedButtonTheme: JElevatedButtonTheme.darkElevatedButtonTheme,
     outlinedButtonTheme: JOutlinedButtonTheme.darkOutlinedButtonTheme,
     inputDecorationTheme: JTextFormFieldTheme.darkInputDecorationTheme,

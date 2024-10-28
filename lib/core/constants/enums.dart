@@ -1,6 +1,1 @@
-enum FooterStatus {
-  accept,
-  cancel,
-  send,
-  chat,
-}
+enum StepStatus { pending, completed }

@@ -11,7 +11,7 @@ class JSize {
   static const double xl = 32.0;
 
   // Basic Font Sizes
-  static const double fontXsm = 10.0;
+  static const double fontXsm = 12.0;
   static const double fontSm = 14.0;
   static const double fontMd = 16.0;
   static const double fontLg = 18.0;
@@ -58,5 +58,8 @@ class JSize {
   static const double formFieldSpacing = 12.0;
   static EdgeInsets defaultPadding = const EdgeInsets.all(defaultPaddingValue);
   //-------
-  
+
+//-------- Project based ------
+
+  static const double sidebarWidth = 200;
 }
